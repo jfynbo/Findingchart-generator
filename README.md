@@ -4,12 +4,19 @@ A simple python tool to generate finding charts for a list of targets
 This is a simple script to generate finding charts for a list of targets. I use this for a summerschool I teach to help the students make finding charts for their targets. The scripts fetches images from the Digital Sky Survey. It is hardwired to show a field of 8x8 arcmin^2. Information that should go into the finding charts is given in a configuration file. The configuration file looks like this (example):
 
 first row: number of FCs to make
+
 2nd row: Field of view (in arcmin). If larger than 8 arcmin it will not be shown.
+
 3rd row: run name
+
 4th row: PI
+
 In the rows below "Target" provide: Targetname RA(hr:min:sec) Dec(deg:min:sec).
+
 Coordinates are assumed J2000.0.
+
 ----------------------------------------------------------------------------------
+
 5
 
 6.7
