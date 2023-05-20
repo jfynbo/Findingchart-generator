@@ -11,11 +11,16 @@ In the rows below "Target" provide: Targetname RA(hr:min:sec) Dec(deg:min:sec).
 Coordinates are assumed J2000.0.
 ----------------------------------------------------------------------------------
 5
+
 6.7
+
 68-802
+
 IDA Summerschool 2023
 
+
 Targets:
+
 UGC12423    23:13:13.18    06:25:49.1
 
 Comet       16:23:00      -11:57:25
