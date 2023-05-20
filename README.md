@@ -17,9 +17,14 @@ IDA Summerschool 2023
 
 Targets:
 UGC12423    23:13:13.18    06:25:49.1
+
 Comet       16:23:00      -11:57:25
+
 AT2022nxe   18:43:11.13    60:39:15.7
+
 AT2022ouu   00:42:39.28    41:15:16.9
+
 AT2022fpx   15:31:03.70    53:24:19.26
+
 
 The script uses numpy, matplotlib, astropy, and astroquery.skyview.
