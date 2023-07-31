@@ -63,7 +63,7 @@ for i in range(0,nfcs):
    plt.annotate('Dec(J2000.0)  ='+DECtxt[i], xy = (180,(282+71)-330), fontsize=9)
    plt.annotate('Run ID: '+RunID, xy = (5,(282+71)-340), fontsize=9)
    plt.annotate('PI: '+PI, xy = (5,(282+71)-330), fontsize=9)
-   plt.annotate('Target: '+Object[0],  xy = (5,(282+71)-320), fontsize=9)
+   plt.annotate('Target: '+Object[i],  xy = (5,(282+71)-320), fontsize=9)
    plt.annotate('8x8 armin^2, East left, North up',  xy = (5,(282+71)-290), fontsize=9)
    #Draw field of view
    length = fov*60./1.7
