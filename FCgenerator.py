@@ -39,7 +39,7 @@ for i in range(0,nfcs):
 
    tmp = img[0][0].data
    img2 = np.zeros((ysize+71,xsize),float)
-   img2[71:282+71,0:282] = tmp[0:282,0:282]
+   img2[0:282,0:282] = tmp[0:282,0:282]
 
    plt.figure(figsize=(19*cm,19*cm*(282.+71.)/282.), dpi=600)
    plt.tight_layout()
@@ -50,26 +50,26 @@ for i in range(0,nfcs):
    ax.set_xticks([])
    ax.set_yticks([])
    #Draw arrow to center
-   ax.annotate("", xy=(141, 141+71), xytext=(121, 121+71),
+   ax.annotate("", xy=(141, 141), xytext=(121, 121),
                arrowprops=dict(arrowstyle="->", color='r'), color='white')
    #Scale of image 
-   plt.axhline(y=70.5, linestyle='-', color='black')
-   plt.annotate('60 arcsec',  xy = (7,(282+71)-304), fontsize=9)
-   plt.plot( [5,5+35] , [(282+71)-297, (282+71)-297], color='black')
-   plt.plot( [5,5] , [(282+71)-297-2, (282+71)-297+2], color='black')
-   plt.plot( [5+35,5+35] , [(282+71)-297-2, (282+71)-297+2], color='black')
+   plt.axhline(y=282, linestyle='-', color='black', linewidth=0.75)
+   plt.annotate('Run ID: '+RunID, xy = (5,335), fontsize=9)
+   plt.annotate('60 arcsec',  xy = (7,303), fontsize=9)
+   plt.plot( [5+35,5+35] , [297,303], color='black')
+   plt.plot( [5,5] , [297,303], color='black')
+   plt.plot( [5,5+35] , [300,300], color='black')
    #Write text 
-   plt.annotate('RA(J2000.0)  ='+RAtxt[i], xy = (180,(282+71)-290), fontsize=9)
-   plt.annotate('Dec(J2000.0)  ='+DECtxt[i], xy = (180,(282+71)-300), fontsize=9)
-   plt.annotate('Run ID: '+RunID, xy = (5,(282+71)-327), fontsize=9)
-   plt.annotate('PI: '+PI, xy = (5,(282+71)-335), fontsize=9)
-   plt.annotate('Target: '+Object[i],  xy = (5,(282+71)-350), fontsize=9)
-   plt.annotate('8x8 armin^2, East left, North up',  xy = (5,(282+71)-290), fontsize=9)
+   plt.annotate('RA(J2000.0)  ='+RAtxt[i], xy = (180,342), fontsize=9)
+   plt.annotate('Dec(J2000.0)  ='+DECtxt[i], xy = (180,332), fontsize=9)
+   plt.annotate('PI: '+PI, xy = (5,325), fontsize=9)
+   plt.annotate('Target: '+Object[i],  xy = (5,320), fontsize=9)
+   plt.annotate('8x8 armin'+r'$^2$'+', East left, North up',  xy = (5,288), fontsize=9)
    #Draw field of view
    length = fov*60./1.7
-   plt.plot( [141-length/2, 141+length/2], [141+70.5-length/2,141+70.5-length/2], linestyle='dashed', color='red')
-   plt.plot( [141-length/2, 141+length/2], [141+70.5+length/2,141+70.5+length/2], linestyle='dashed', color='red')
-   plt.plot( [141-length/2, 141-length/2], [141+70.5-length/2,141+70.5+length/2], linestyle='dashed', color='red')
-   plt.plot( [141+length/2, 141+length/2], [141+70.5-length/2,141+70.5+length/2], linestyle='dashed', color='red')
+   plt.plot( [141-length/2, 141+length/2], [141-length/2,141-length/2], linestyle='dashed', color='red')
+   plt.plot( [141-length/2, 141+length/2], [141+length/2,141+length/2], linestyle='dashed', color='red')
+   plt.plot( [141-length/2, 141-length/2], [141-length/2,141+length/2], linestyle='dashed', color='red')
+   plt.plot( [141+length/2, 141+length/2], [141-length/2,141+length/2], linestyle='dashed', color='red')
    #Save to file
    plt.savefig('FC_'+Object[i]+'.jpg', format='jpg')
