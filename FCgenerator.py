@@ -43,7 +43,7 @@ for i in range(0,nfcs):
 
    plt.figure(figsize=(19*cm,19*cm*(282.+71.)/282.), dpi=600)
    plt.tight_layout()
-   plt.imshow(img2, cmap='gray_r',vmax=np.max(img[0][0].data)*.65,vmin=np.min(img[0][0].data)*.45)
+   plt.imshow(img2, cmap='gray_r',vmax=np.max(img[0][0].data)*.65,vmin=np.min(img[0][0].data)*.45,origin='lower')
    ax = plt.gca()
    ax.xaxis.set_tick_params(labelbottom=False)
    ax.yaxis.set_tick_params(labelleft=False)
@@ -54,16 +54,16 @@ for i in range(0,nfcs):
                arrowprops=dict(arrowstyle="->", color='r'), color='white')
    #Scale of image 
    plt.axhline(y=70.5, linestyle='-', color='black')
-   plt.annotate('60 arcsec',  xy = (7,(282+71)-307), fontsize=9)
-   plt.plot( [5,5+35] , [(282+71)-305, (282+71)-305], color='black')
-   plt.plot( [5,5] , [(282+71)-305-2, (282+71)-305+2], color='black')
-   plt.plot( [5+35,5+35] , [(282+71)-305-2, (282+71)-305+2], color='black')
+   plt.annotate('60 arcsec',  xy = (7,(282+71)-304), fontsize=9)
+   plt.plot( [5,5+35] , [(282+71)-297, (282+71)-297], color='black')
+   plt.plot( [5,5] , [(282+71)-297-2, (282+71)-297+2], color='black')
+   plt.plot( [5+35,5+35] , [(282+71)-297-2, (282+71)-297+2], color='black')
    #Write text 
-   plt.annotate('RA(J2000.0)  ='+RAtxt[i], xy = (180,(282+71)-340), fontsize=9)
-   plt.annotate('Dec(J2000.0)  ='+DECtxt[i], xy = (180,(282+71)-330), fontsize=9)
-   plt.annotate('Run ID: '+RunID, xy = (5,(282+71)-340), fontsize=9)
-   plt.annotate('PI: '+PI, xy = (5,(282+71)-330), fontsize=9)
-   plt.annotate('Target: '+Object[i],  xy = (5,(282+71)-320), fontsize=9)
+   plt.annotate('RA(J2000.0)  ='+RAtxt[i], xy = (180,(282+71)-290), fontsize=9)
+   plt.annotate('Dec(J2000.0)  ='+DECtxt[i], xy = (180,(282+71)-300), fontsize=9)
+   plt.annotate('Run ID: '+RunID, xy = (5,(282+71)-327), fontsize=9)
+   plt.annotate('PI: '+PI, xy = (5,(282+71)-335), fontsize=9)
+   plt.annotate('Target: '+Object[i],  xy = (5,(282+71)-350), fontsize=9)
    plt.annotate('8x8 armin^2, East left, North up',  xy = (5,(282+71)-290), fontsize=9)
    #Draw field of view
    length = fov*60./1.7
